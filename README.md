@@ -1,43 +1,81 @@
+# Crop Recommendation System
 
-## Overview
+This project is a Machine Learning-based Crop Recommendation System that helps farmers decide which crop to plant based on soil nutrients and environmental conditions. The project uses a Support Vector Machine (SVM) for the prediction and is deployed using Flask.
 
-Crop Yield Prediction is a machine learning project aimed at predicting the yield of crops based on various factors such as weather conditions, soil quality, and crop type. This project leverages historical data on crop yield and environmental factors to build predictive models that can forecast future crop yields.
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dataset](#dataset)
+- [Model](#model)
+- [Web Application](#web-application)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Introduction
+The Crop Recommendation System aims to assist farmers in choosing the right crop for their land by analyzing various factors like soil nutrients and environmental conditions. By providing these inputs, the system predicts the most suitable crop to maximize yield.
 
 ## Features
-
-- Data Preprocessing: Clean and preprocess raw data to prepare it for model training.
-- Model Training: Utilize machine learning algorithms to train predictive models on historical crop yield and environmental data.
-- Prediction: Use trained models to make predictions on future crop yields based on input parameters.
-- Visualization: Visualize data, model performance, and prediction results using charts and graphs.
+- Predicts the best crop to plant based on input conditions.
+- Uses Support Vector Machine (SVM) for high accuracy.
+- Simple and user-friendly web interface built with Flask.
+- Easy to extend and customize.
 
 ## Installation
+Follow these steps to get the project up and running on your local machine.
 
-1. Clone the repository:
+### Prerequisites
+- Python 3.7+
+- Flask
+- scikit-learn
+- pandas
+- numpy
 
-   ```bash
-   git clone https://github.com/1-Sanchit-1/CROP-YIELD-PREDICTION
-   ```
+### Steps
+1. Clone the repository
+    ```bash
+    git clone https://github.com/yourusername/crop-recommendation-system.git
+    cd crop-recommendation-system
+    ```
+
+2. Create a virtual environment
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3. Install the required packages
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. Run the Flask application
+    ```bash
+    python app.py
+    ```
+
+5. Open your web browser and go to `http://127.0.0.1:5000/`.
 
 ## Usage
+1. Open the web application in your browser.
+2. Enter the required input parameters: Nitrogen (N), Phosphorus (P), Potassium (K), pH, Rainfall, Humidity, and Temperature.
+3. Click the "Predict" button to get the recommended crop.
 
-1. Prepare your dataset: Ensure your dataset is properly formatted and contains relevant features such as weather data, soil information, and crop type.
-2. Train the model: Run the training script to train the predictive model using your dataset.
-3. Make predictions: Use the trained model to make predictions on new data points or future time periods.
-4. Visualize results: Visualize the prediction results using the provided visualization tools and scripts.
+## Dataset
+The dataset used for training the model includes various features such as:
+- Nitrogen (N)
+- Phosphorus (P)
+- Potassium (K)
+- pH
+- Rainfall
+- Humidity
+- Temperature
 
-## Contributing
+You can find the dataset in the `data` directory.
 
-Contributions are welcome! If you'd like to contribute to Crop-Yield-Prediction, please follow these steps:
+## Model
+The model is built using a Support Vector Machine (SVM) classifier. The training script is available in the `model` directory. To retrain the model, you can run the training script as follows:
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Make your changes.
-4. Commit your changes (`git commit -am 'Add new feature'`).
-5. Push to the branch (`git push origin feature/your-feature`).
-6. Create a new pull request.
-
-
-## Contact
-
-For questions or inquiries, please contact [lcb2021031@iiitl.ac.in](mailto:your-lcb2021031@iiitl.ac.in).
-
+```bash
+python model/train_model.py
