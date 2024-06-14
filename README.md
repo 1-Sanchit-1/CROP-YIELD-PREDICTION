@@ -72,10 +72,5 @@ The dataset used for training the model includes various features such as:
 - Humidity
 - Temperature
 
-You can find the dataset in the `data` directory.
 
-## Model
-The model is built using a Support Vector Machine (SVM) classifier. The training script is available in the `model` directory. To retrain the model, you can run the training script as follows:
 
-```bash
-python model/train_model.py
